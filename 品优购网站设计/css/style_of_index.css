@@ -1,0 +1,590 @@
+/* 全局设定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: 0;
+}
+
+body {
+    
+    height: 2000px;
+}
+
+em {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+/* 字体图标声明 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?b94ads');
+    src:  url('../fonts/icomoon.eot?b94ads#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?b94ads') format('truetype'),
+      url('../fonts/icomoon.woff?b94ads') format('woff'),
+      url('../fonts/icomoon.svg?b94ads#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+.icofont {
+    font-family: icomoon;
+}
+
+/* 导航栏通栏制作 */
+header {
+    width: 100%;
+    height: 47px;
+    margin-top: 40px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    color: #666666;
+}
+
+/* 导航栏内容制作 */
+.navin {
+    width: 1250px;
+    margin: 0 auto;
+    line-height: 47px;
+}
+
+/* 头部导航栏左侧区域 */
+.navin span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* 导航栏列表部分后面的字体图标：下拉菜单 */
+.navin section ul li.icomoon::after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    font-family: 'icomoon';
+    font-size: 14px;
+}
+
+/* 导航栏下拉菜单父盒子 */
+.navin section {
+    float: right;
+    width: 800px;
+    height: 15px;
+    line-height: 15px;
+    margin-top: 15px;
+}
+
+/* 导航栏下拉菜单 */
+.navin section ul li {
+    float: left;
+    position: relative;
+    padding: 0 20px;
+    border-right: 1px solid #666666;
+}
+
+/* 导航栏链接字体样式 */
+.navin a {
+    color: #666666;
+}
+
+.navin a:hover {
+    color: #c81623;
+}
+
+/* 免费注册字体样式 */
+.navin a[href$='1'] {
+    color: #c81623;
+}
+
+/* 放logo+搜索框+购物车 的父盒子 */
+.logo_search {
+    position: relative;
+    width: 1250px;
+    height: 160px;
+    margin: 0 auto;
+}
+
+/* logo设置 */
+.logo {
+    float: left;
+    width: 171px;
+    height: 61px;
+    margin-top: 30px;
+}
+
+/* search搜索模块 */
+.search {
+    position: absolute;
+    top: 30px;
+    left: 28%;
+    width:550px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+/* 搜索栏 */
+.search input {
+
+    width: 450px;
+    height: 40px;
+    border: 2px solid #c81623;
+    border-right: 0;
+    
+}
+
+/* 搜索按钮 */
+.search button {
+    float: right;
+    width: 100px;
+    height: 40px;
+    background-color: #c81623;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* 搜索栏下面的选项 */
+.search ul {
+    padding-top: 10px;
+}
+.search ul li a {
+    float: left;
+    height: 25px;
+    margin-right: 10px;
+}
+.search ul li a:hover {
+    color:#c81623;
+}
+
+/* 购物车盒子 */
+.shopping {
+    position: relative;
+    float: right;
+    top: 40px;
+    right: 90px;
+    width: 140px;
+    height: 35px;
+    background-color: #f7f7f7;
+    font-size: 14px;
+    line-height: 35px;
+    color: #666666;
+}
+.shopping .ico1 {
+    position: relative;
+    left: 15px;
+    color: #c81623;
+}
+.shopping h4 {
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    font-weight: normal;
+    font-size: 13px;
+}
+.shopping .ico2 {
+    position: relative;
+    right: -25px;
+}
+.shopping .num {
+    position: absolute;
+    top: -12px;
+    right: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px 9px 9px 0;
+    background-color: #e60012;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 20px;
+    text-align: center;
+}
+/* 中部导航栏制作 */
+.mid {
+    width: 1250px;
+    height: 45px;
+    margin: 0 auto;
+    line-height: 45px;
+    font-size: 15px;
+}
+.mid h3 {
+    float: left;
+    width: 200px;
+    background-color: #b1191a;
+    text-align: center;
+    font-weight: normal;
+    color: #ffffff;
+}
+.mid ul li {
+    float: left;
+    margin-right: 40px;
+    color: #666666;
+}
+.mid ul li:first-child {
+    margin-left: 20px;
+}
+.mid ul li a:hover {
+    color: #c81623;
+}
+p.midunderline {
+    height: 3px;
+    background-color: #b1191a;
+}
+
+/* banner模块制作 */
+.banner {
+    position: relative;
+    width: 1250px;
+    height: 480px;
+    margin: 0 auto 30px;
+}
+
+/* banner侧边栏 */
+.banner aside {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+    background-color: #c81623;
+}
+.banner aside ul {
+    width: 200px;
+}
+.banner aside ul li {
+    height: 20px;
+    margin-bottom: 12px;
+    padding: 0 5px;
+    line-height: 20px;
+}
+.banner aside ul li:hover {
+    background-color: #ffffff;
+}
+.banner aside ul li a {
+    color: #ffffff;
+    font-size: 14px;
+}
+.banner aside ul li a:hover {
+    color: #c81623;
+}
+.banner aside ul li span {
+    font-family: icomoon;
+    float: right;
+    color: #ffffff;
+
+}
+
+/* banner图片 */
+.banner img {
+    position: absolute;
+    width: 721px;
+    height: 455px;
+    bottom: 0;
+}
+
+/* banner右侧区域 */
+.banner .news {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 295px;
+    height: 455px;
+}
+
+/* 快报栏 */
+.banner .news .up {
+    padding: 2px;
+    color: #666666;
+    border: 1px solid #e4e4e4;
+}
+.banner .news .up h3 {
+    height: 30px;
+    border-bottom: 1px dotted #e4e4e4;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 550;
+}
+.banner .news .up h3 span {
+    position: relative;
+    float: right;
+    right: 15px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.banner .news .up ul li span {
+    font-weight: 550;
+}
+.banner .news .up ul li {
+    width: 270px;
+    height: 20px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.banner .news .up ul li:first-child {
+    margin-top: 5px;
+}
+
+/* banner右侧表格 */
+.banner .news .under {
+    margin-top: -1px;
+}
+.banner .news .under table {
+    width: 100%;
+}
+.banner .news .under table tr td {
+    border: 1px solid #e4e4e4;
+    padding: 15px 13px;
+    text-align: center;
+    line-height: 1em;
+    font-size: 12px;
+}
+.banner .news .under table tr:nth-child(n+2) td{
+    border-top: 0;
+}
+.banner .news .under table tr td:nth-child(n+2) {
+    border-left: 0;
+}
+.banner .news .under table tr td span {
+    display: inline-block;
+    font-size: 20px;
+    color: #c81623;
+    margin-bottom: 10px;
+}
+
+/* banner右侧图片 */
+.banner .news img {
+    width: 100%;
+    height: 80px;
+}
+
+/* 手表栏目 */
+.watch {
+    width: 1250px;
+    height: 161px;
+    margin: 0 auto 30px;
+}
+.watch .moddle {
+    float: left;
+    margin-right: 3px;
+    width: 247px;
+    height: 161px;
+}
+
+
+/* 主体部分 */
+.goods {
+    width: 1250px;
+    height: 400px;
+    margin: 0 auto 50px;
+}
+
+/* 主体部分导航栏样式 */
+.goods .nav {
+    height: 34px;
+    border-bottom: 2px solid #c81623;
+    line-height: 34px;
+}
+.goods .nav h3 {
+    float: left;
+    color: #c81623;
+    font-weight: 400;
+}
+.goods .nav ul {
+    float: right;
+    margin-top: 8px;
+}
+.goods .nav ul li {
+    float: left;
+    line-height: 1em;
+    border-right: 1.5px solid #666666;
+    padding: 0 13px;
+}
+.goods .nav ul li a {
+    font-size: 13px;
+}
+.goods .nav ul li:last-child {
+    border-right: 0;
+}
+
+/* 三星曲面电视 */
+.goods .tdbox {
+    float: left;
+    width: 200px;
+    height: 360px;
+    background-color: #f9f9f9;
+    text-align: center;
+
+}
+.goods .tdbox table {
+    float: left;
+    height: 160px;
+    text-align: center;
+}
+.goods .tdbox table tr td {
+    display: inline-block;
+    width: 90px;
+    height: 35px;
+    margin-right: 8px;
+    line-height: 35px;
+    border-bottom: 1px solid #cccccc;
+}
+.goods .tdbox table tr td a {
+    font-size: 13px;
+}
+.goods .tdbox table tr td a:hover {
+    color: #c81623;
+}
+
+/* 烧水壶 */
+.goods .waterbox {
+    float: left;
+    width: 345px;
+    height: 360px;
+}
+.goods .waterbox img {
+    width: 345px;
+    height: 360px;
+}
+
+/* 烘焙机 */
+.goods .TV {
+    float: left;
+    width: 219px;
+    height: 360px;
+}
+.goods .TV img {
+    border-bottom: 1px solid #cccccc;
+}
+.goods .TV a:first-child img {
+    width: 219px;
+    height: 180px;
+}
+.ggod .TV a:last-child img {
+    width: 219px;
+    height: 178px;
+}
+.goods .TV a:last-child img {
+    margin-top: -4px;
+}
+.goods .TVshow a img {
+    float: left;
+    width: 220px;
+    height: 359px;
+    border: 1px solid #cccccc;
+    border-top: 0;
+}
+.goods .wind img {
+    border-bottom: 1px solid #cccccc;
+}
+.goods .wind a:last-child img {
+    margin-top: -4px;
+}
+
+/* 售货服务 */
+/* one */
+.telephone {
+    position: relative;
+    width: 1250px;
+    height: 60px;
+    margin: 0 auto 30px;
+    color: #666666;
+}
+.telephone .one,
+.telephone .two,
+.telephone .three,
+.telephone .four,
+.telephone .five {
+    float: left;
+    position: relative;
+    width: 250px;
+    height: 66px;
+}
+.telephone .box1 {
+    float: left;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.telephone .box1 img {
+    position: absolute;
+    top: -4px;
+    left: -254px;
+}
+.telephone .box2 {
+    float: left;
+    margin-left: 5px;
+}
+.telephone .box2 h3 {
+    font-weight: 600;
+    font-size: 17px;
+}
+.telephone .box2 span {
+    font-size: 14px;
+}
+
+/* 版权声明 */
+footer {
+    width: 1250px;
+    height: 215px;
+    margin: 0 auto;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+footer .ftbox {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    padding: 30px 0;
+    padding-left: 10px;
+    color: #666666;
+}
+footer .ftbox dl dt {
+    font-weight: 600;
+    color: #333333;
+    height: 35px;    
+    font-size: 17px;
+}
+footer .ftbox dl dd {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+/* 二维码 */
+footer .linkcode {
+    float: left;
+    width: 175px;
+    margin-top: 38px;
+    text-align: center;
+}
+footer .linkcode h3 {
+    font-weight: normal;
+    font-size: 16px;
+}
+footer .linkcode h4 {
+    font-weight: normal;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
