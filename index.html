@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入页面样式 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <title>尚优选详情页面</title>
+</head>
+
+<body>
+    <!-- 最外层的包裹元素 -->
+    <div id="wrapper">
+        <!-- 头部开始 -->
+        <header id="header">
+            <!-- 上面部分 -->
+            <div class="headTop">
+                <!-- 版心元素 -->
+                <div class="headTopMain">
+                    <!-- 左侧 -->
+                    <div class="left">
+                        <h5>欢迎来到商优选！ 请</h5>
+                        <P>
+                            <a href="JavaScript:;">登录</a>
+                            <a href="JavaScript:;">注册</a>
+                        </P>
+                    </div>
+                    <!-- 右侧 -->
+                    <div class="right">
+                        <nav>
+                            <a href="JavaScript:;">我的订单</a>
+                            <a href="JavaScript:;">我的购物车</a>
+                            <a href="JavaScript:;">我的尚优选</a>
+                            <a href="JavaScript:;">尚优选会员</a>
+                            <a href="JavaScript:;">企业采购</a>
+                            <a href="JavaScript:;">关注尚优选</a>
+                            <a href="JavaScript:;">合作招商</a>
+                            <a href="JavaScript:;">商家后台</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- 下面部分 -->
+            <div class="headBottom">
+                <!-- 版心元素 -->
+                <div class="headBottomMain">
+                    <!-- logo -->
+                    <div class="logo">
+                        <a href="javascript:;">
+                            <img src="./images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <!-- 搜索框 -->
+                    <div class="search">
+                        <input type="text" id="searchContext" placeholder="请输入搜索内容">
+                        <input type="submit" value="搜索" id="searchBtn">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 头部结束 -->
+        <!-- 分类导航开始 -->
+        <div class="navWrap">
+            <!-- 版心元素 -->
+            <div class="navWrapMain">
+                <a href="javascript:;">全部商品分类</a>
+                <a href="javascript:;">服装城</a>
+                <a href="javascript:;">美妆馆</a>
+                <a href="javascript:;">尚优选超市</a>
+                <a href="javascript:;">全球购</a>
+                <a href="javascript:;">闪购</a>
+                <a href="javascript:;">团购</a>
+                <a href="javascript:;">有趣</a>
+                <a href="javascript:;">秒杀</a>
+            </div>
+        </div>
+        <!-- 分类导航结束 -->
+        <!-- 内容区开始 -->
+        <div class="content">
+            <!-- 版心元素 -->
+            <div class="contentMain">
+                <!-- 路径导航开始 -->
+                <div class="navPath">
+                    <!-- 改用动态数据渲染 -->
+                    <!-- <a href="javascript:;">手机、数码、通讯</a>
+                    <span>/</span>
+                    <a href="javascript:;">手机</a>
+                    <span>/</span>
+                    <a href="javascript:;">Apple苹果</a>
+                    <span>/</span>
+                    <a>iphone 6S系</a> -->
+                </div>
+                <!-- 路径导航结束 -->
+                <!-- 中心区域开始 -->
+                <div id="center">
+                    <!-- 左侧放大镜效果开始 -->
+                    <div class="left">
+                        <!-- 上边具体效果图开始 -->
+                        <div class="leftTop">
+                            <!-- 正常图 -->
+                            <div class="smallPic">
+                                <!-- 图片 -->
+                                <img src="./images/s1.png" alt="">
+                                <!-- 遮罩层(动态渲染) -->
+                                <!-- <div class="mask"></div> -->
+                            </div>
+                            <!-- 放大图 （动态渲染）-->
+                            <!-- <div class="bigPic">
+                                <img src="./images/b1.png" alt="">
+                            </div> -->
+                        </div>
+                        <!-- 上边具体效果图结束 -->
+                        <!-- 下边缩略图展示开始 -->
+                        <div id="leftBottom">
+                            <a href="javscript:;" id="lt">&lt;</a>
+                            <div class="picList">
+                                <ul>
+                                    <!-- <li>
+                                        <img src="./images/s1.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./images/s1.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./images/s1.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./images/s1.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./images/s1.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./images/s1.png" alt="">
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <a href="javscript:;" id="gt">&gt;</a>
+                        </div>
+                        <!-- 下边缩略图展示结束 -->
+                    </div>
+                    <!-- 左侧放大镜效果结束 -->
+                    <!-- 右侧开始 -->
+                    <div class="right">
+                        <!-- 商品数据详情页面开始 -->
+                        <div class="rightTop">
+                            <h3>Apple iPhone 6s（A1700）64G玫瑰金色 移动通信电信4G手机bbb123</h3>
+                            <p>推荐选择下方[移动优惠购],手机套餐齐搞定,不用换号,每月还有花费返</p>
+                            <div class="priceWrap">
+                                <div class="priceTop">
+                                    <span>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</span>
+                                    <div class="price">
+                                        <span>￥</span>
+                                        <p>5299</p>
+                                        <i>降价通知</i>
+                                    </div>
+                                    <p>
+                                        <span>累计评价</span>
+                                        <span>670000</span>
+                                    </p>
+                                </div>
+                                <div class="priceBottom">
+                                    <span>促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</span>
+                                    <p>
+                                        <span>加价购</span>
+                                        <span>满999.00另加20.00元，或满1999.00另加30.00元，或满2999.00另加40.00元，即可在购物车换购热销商品</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="support">
+                                <span>支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持</span>
+                                <p>以旧换新，闲置手机回收 4G套餐超值抢 礼品购</p>
+                            </div>
+                            <div class="address">
+                                <span>配&nbsp;送&nbsp;至</span>
+                                <p>广东省 深圳市 宝安区</p>
+                            </div>
+                        </div>
+                        <!-- 商品数据详情页面结束 -->
+                        <!-- 商品参数结构页面开始 -->
+                        <div class="rightBottom">
+                            <!-- 选择结果展示开始 -->
+                            <div class="chooseResults">
+                                <!-- <div class="mask">
+                                    黑色
+                                    <a href="JavaScript:;">X</a>
+                                </div>
+                                <div class="mask">
+                                    128G
+                                    <a href="JavaScript:;">X</a>
+                                </div> -->
+                            </div>
+                            <!-- 选择结果展示结束 -->
+                            <!-- 选择选项展示开始 -->
+                            <div class="choosees">
+                                <dl>
+                                    <dt>选择颜色</dt>
+                                    <dd>金色</dd>
+                                    <dd>银色</dd>
+                                    <dd>黑色</dd>
+                                </dl>
+                                <dl>
+                                    <dt>内存容量</dt>
+                                    <dd>16G</dd>
+                                    <dd>64G</dd>
+                                    <dd>128G</dd>
+                                    <dd>256G</dd>
+                                </dl>
+                                <dl>
+                                    <dt>选择版本</dt>
+                                    <dd>公开版</dd>
+                                    <dd>移动版</dd>
+                                </dl>
+                                <dl>
+                                    <dt>购买方式</dt>
+                                    <dd>官方标配</dd>
+                                    <dd>优惠移动版</dd>
+                                    <dd>电信优惠版</dd>
+                                </dl>
+                            </div>
+                            <!-- 选择选项展示结束 -->
+                        </div>
+                        <!-- 商品参数结构页面结束 -->
+                        <!-- 加入购物车及数量结构开始 -->
+                        <div class="addCart">
+                            <div class="count">
+                                <input type="text" name="" id="">
+                                <a href="javascript:;">+</a>
+                                <a href="javascript:;">-</a>
+                            </div>
+                            <button>加入购物车</button>
+                        </div>
+                        <!-- 加入购物车及数量结构结束 -->
+                    </div>
+                    <!-- 右侧结束 -->
+                </div>
+                <!-- 中心区域结束 -->
+            </div>
+        </div>
+        <!-- 内容区结束 -->
+        <!--商品详情中间部分开始-->
+        <div class="goodsDetailWrap">
+            <!--左边的侧边栏-->
+            <aside class="leftAside">
+                <!--上边-->
+                <div class="asideTop">
+                    <h4 class="active">相关分类</h4>
+                    <h4>推荐品牌</h4>
+                </div>
+                <!--下边-->
+                <div class="asideContent">
+                    <div class="active">
+                        <ul class="goodslist1">
+                            <li>手机</li>
+                            <li>手机壳</li>
+                            <li>内存卡</li>
+                            <li>iphone配件</li>
+                            <li>贴膜</li>
+                            <li>手机耳机</li>
+                            <li>移动电源</li>
+                            <li>平板电脑</li>
+                        </ul>
+                        <ul class="goodslist2">
+                            <li>
+                                <img src="images/part01.png" alt="">
+                                <span>Apple苹果iPhone 6s (A1699)</span>
+                                <p>¥6088.00</p>
+                                <div class="button">
+                                    <a href="javascript:;">加入购物车</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/part01.png" alt="">
+                                <span>Apple苹果iPhone 6s (A1699)</span>
+                                <p>¥6088.00</p>
+                                <div class="button">
+                                    <a href="javascript:;">加入购物车</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/part01.png" alt="">
+                                <span>Apple苹果iPhone 6s (A1699)</span>
+                                <p>¥6088.00</p>
+                                <div class="button">
+                                    <a href="javascript:;">加入购物车</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/part01.png" alt="">
+                                <span>Apple苹果iPhone 6s (A1699)</span>
+                                <p>¥6088.00</p>
+                                <div class="button">
+                                    <a href="javascript:;">加入购物车</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>我是标签2: 推荐品牌的内容</div>
+                </div>
+            </aside>
+            <!--右边的结构-->
+            <div class="rightDetail"></div>
+        </div>
+        <!--商品详情中间部分结束-->
+    </div>
+    <!-- 先引入商品数据 -->
+    <script src="./JavaScript/data.js"></script>
+    <!-- 后引入交互文件 -->
+    <script src="./JavaScript/index.js"></script>
+
+</body>
+
+</html>

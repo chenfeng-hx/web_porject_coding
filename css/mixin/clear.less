@@ -1,0 +1,9 @@
+// 清除浮动
+// 使用在 .headTopMain 中
+.clearfix(){
+    &::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
