@@ -7,6 +7,11 @@ import '@/assets/css/global.css'
 // 导入路由实例
 import router from './router'
 
+// 引入store
+import store from "@/store";
+// 引入模拟数据
+import '../src/api/mock'
+
 // 引入 element-ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -16,5 +21,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')

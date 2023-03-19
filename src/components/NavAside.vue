@@ -2,7 +2,7 @@
 	<div>
 		<el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse"
 		background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
-			<h3>通用后台管理系统</h3>
+			<h3>{{ isCollapse ? '后台' : '通用后台管理系统' }}</h3>
 			<!-- 没有子菜单的导航 -->
 			<el-menu-item @click="toUrl(item)" v-for="item in noChildren" :key="item.name" :index="item.name">
 				<i :class="`el-icon-${item.icon}`"></i>
@@ -29,7 +29,6 @@ export default {
 	name: "NavAside",
 	data() {
 		return {
-			isCollapse: false,
 			menuData: [
 				{
 					path: '/',
@@ -59,14 +58,14 @@ export default {
 					children: [
 						{
 							path: '/pageOne',
-							name: '/page1',
+							name: 'page1',
 							label: '页面1',
 							icon: 'setting',
 							url: 'Other/PageOne'
 						},
 						{
 							path: '/pageTwo',
-							name: '/page2',
+							name: 'page2',
 							label: '页面2',
 							icon: 'setting',
 							url: 'Other/PageTwo'
@@ -88,6 +87,7 @@ export default {
 			if (this.$route.path !== item.path && !(this.$route.path === '/home' && item.path === '/')) {
 				this.$router.push(item.path);
 			}
+			this.$store.commit('updateBreadTar', item);
 		}
 	},
 	computed: {
@@ -97,8 +97,11 @@ export default {
 		},
 		hasChildren() {
 			return this.menuData.filter(item => item.children)
+		},
+		isCollapse() {
+			return  this.$store.state.home.isCollapse
 		}
-	}
+	},
 }
 </script>
 

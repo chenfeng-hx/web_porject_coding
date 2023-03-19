@@ -16,11 +16,11 @@ const routes = [
 		redirect: '/home',
 		component: Main,
 		children: [
-			{ path: 'home', component: home },   // 首页
-			{ path: 'user', component: user },   // 用户页
-			{ path: 'mall', component: Mall },    // 商品管理
-			{ path: 'pageOne', component: PageOne },  // 页面1
-			{ path: 'pageTwo', component: PageTwo }   // 页面2
+			{ path: 'home', name: 'home', component: home },   // 首页
+			{ path: 'user', name: 'user', component: user },   // 用户页
+			{ path: 'mall', name: 'mall', component: Mall },    // 商品管理
+			{ path: 'pageOne', name: 'page1', component: PageOne },  // 页面1
+			{ path: 'pageTwo', name: 'page2', component: PageTwo }   // 页面2
 		]
 	}
 ]
