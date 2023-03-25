@@ -27,6 +27,12 @@ export default {
 		closeTag(state, item) {
 			const index = state.tabslist.findIndex(value => value.name === item.name)
 			state.tabslist.splice(index, 1);
+		},
+		// 进行人员列表删除按钮的功能
+		deleteUserInfo(state, { index, row }) {
+			if (row.name === state.tableData[index].name) {
+				state.tableData.splice(index, 1);
+			}
 		}
 	},
 	state: {
@@ -41,5 +47,22 @@ export default {
 				url: "Home/Home",
 			}
 		],
+		// 用户列表数据
+		tableData: [
+			{
+				name: '王小虎',
+				sex: '男',
+				age: 17,
+				birth: '2002-12-31',
+				addr: '成华大道花园小区403号'
+			},
+			{
+				name: '王晓华',
+				sex: '男',
+				age: 25,
+				birth: '1882-12-31',
+				addr: '北平小明区新华大道2号'
+			},
+		]
 	}
 }

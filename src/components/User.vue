@@ -52,9 +52,23 @@
 				:data="tableData"
 				style="width: 100%">
 				<el-table-column
-					prop="date"
-					label="日期"
-					width="180">
+					v-for="item in labels"
+					:key="item.label"
+					:prop="item.data"
+					:label="item.label"
+					width="auto">
+				</el-table-column>
+				<!--自定义列表-->
+				<el-table-column label="操作">
+					<template slot-scope="scope">
+						<el-button
+							size="mini"
+							@click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+						<el-button
+							size="mini"
+							type="danger"
+							@click="handleDelete(scope.$index, scope.row)">删除</el-button>
+					</template>
 				</el-table-column>
 			</el-table>
 		</div>
@@ -67,6 +81,7 @@ export default {
 	data() {
 		return {
 			dialogVisible: false,
+			// 新建表单数据相关
 			form: {
 				name: '',
 				age: '',
@@ -80,8 +95,31 @@ export default {
 				sex: {required: true, message: '请输入性别', trigger: 'blur'},
 				addr: {required: true, message: '请输入地址', trigger: 'blur'},
 				birth: {required: true, message: '请输入生日', trigger: 'blur'},
-
-			}
+			},
+			// 动态渲染表格的行信息
+			labels: [
+				{
+					label: '姓名',
+					data: 'name'
+				},
+				{
+					label: '性别',
+					data: 'sex'
+				},
+				{
+					label: '年龄',
+					data: 'age'
+				},
+				{
+					label: '出生日期',
+					data: 'birth'
+				},
+				{
+					label: '地址',
+					data: 'addr'
+				},
+			],
+			modelType: 0,   // 数据新增和编辑使用同一模态框，只是内容不同  0 新增   1 编辑
 		};
 	},
 	methods: {
@@ -108,9 +146,23 @@ export default {
 		},
 		resetForm(formName) {
 			this.$refs[formName].resetFields();
+		},
+		// 自定义列的操作方法
+		handleEdit(index, row) {
+			console.log(index, row);
+		},
+		handleDelete(index, row) {
+			//调用方法删除vuex中的用户数据
+			this.$store.commit('deleteUserInfo', {index, row});
+			console.log(index, row);
 		}
 
 	},
+	computed: {
+		tableData() {
+			return this.$store.state.home.tableData;
+		}
+	}
 
 }
 </script>
